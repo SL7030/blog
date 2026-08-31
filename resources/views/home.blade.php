@@ -14,7 +14,16 @@
 
     <style>
         body{
-            color:rgb(5, 5, 5);
+            color:rgb(184, 24, 24);
+        }
+    </style>
+
+@endpush
+
+@push('css')
+    <style>
+        footer{
+            color: #e7d10c
         }
     </style>
 
@@ -31,6 +40,11 @@
         </x-alert2>
         <p>
             Hola mundo
+        </p>
+    </div>
+    <div class="max-w-7x1 mx-auto px-7">
+        <p>
+            Hola nene
         </p>
     </div>
 @endsection

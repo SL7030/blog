@@ -18,7 +18,11 @@ return new class extends Migration
 
             $table->longText('content');
 
-            $table->string('categoria');
+            $table->string('category');
+
+            $table->timestamp('published_at');
+
+            $table->boolean('is_active')->default(true);
 
             $table->timestamps();
         });

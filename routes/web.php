@@ -14,6 +14,11 @@ Route::get('/posts/create', [PostController::class,'create']);
 Route::get('/posts/{post}', [PostController::class,'show']);
 Route::get('prueba', function(){
 
+        $post = post::find(1);
+        return $post->is_active;
+
+        });
+
         //Crear nuevo post
 
 /*
@@ -27,10 +32,6 @@ Route::get('prueba', function(){
 
         return $post;
   */
-
-        $post = post::find(4);
-        return $post;
-
 
         /*
             Actualizar Registro
@@ -55,6 +56,3 @@ Route::get('prueba', function(){
         $post->delete();
 
         return "Eliminado correctamente"; */
-
-});
-
