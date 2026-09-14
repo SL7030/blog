@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,4 +9,24 @@
 <body>
     <h1>Aquí se mostrarán todos los posts</h1>
 </body>
-</html>
+</html> --}}
+
+<x-app-layout>
+
+    <h1>Aquí se mostrarán todos los posts</h1>
+    <a href="{{route('posts.create')}}">
+        Crear Nuevo Post
+    </a>
+
+    <ul>
+        @foreach ($posts as $post)
+        <li>
+            <a href="{{route('posts.show', $post->id)}}">
+                {{ $post->title }}
+            </a>
+        </li>
+        @endforeach
+    </ul>
+    {{$posts->links()}}
+</x-app-layout>
+

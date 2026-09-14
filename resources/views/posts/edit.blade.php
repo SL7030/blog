@@ -1,24 +1,25 @@
 <x-app-layout>
     <h1>Formulario para crear un nuevo post</h1>
-    <form action="{{route('posts.store')}}" method="POST">
+    <form action="{{route('posts.update',$post->id)}}" method="POST">
         @csrf{{-- token de seguridad para el ingreso de informacion --}}
+        @method('PUT')
         <label>
             Título:
-            <input type="text" name="title">
+            <input type="text" name="title" value="{{$post->title}}">
         </label>
         <br><br>
         <label>
             Categoría:
-            <input type="text" name="category">
+            <input type="text" name="category" value="{{$post->category}}">
         </label>
         <br><br>
         <label>
             Contenido:
-            <textarea name="content"></textarea>
+            <textarea name="content">{{$post->content}}</textarea>
         </label>
         <br><br>
         <button type="submit">
-            Crear post
+            Actualizar post
         </button>
     </form>
 </x-app-layout>

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11</title>
 
-    <script src='https://cdn.tailwindcss.com'></script>
-
+    {{-- <script src='https://cdn.tailwindcss.com'></script> --}}
+    {{-- <link href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
 </head>
 <body>
     <header></header>
